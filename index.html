@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/script.js" defer></script> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <!-- <div class="logo">
+                <img src="assets/miku-icon2.jpeg" alt="logo" class="logo-img"> 
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">Members</a>
+                <a href="#">Message us</a>
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div> -->
+        </nav>
+    </header>
+
+        <!-- GREETINGS -->
+        <main>
+            <section class="greetings">
+                <div class="hello-greetings">
+                    <div class="greetings-container">
+                        <h1 id="first-greeting">Hello</h1> <h2>Welcome to Calculator Body Mass Index</h2>
+                        <p>Body Mass Index (BMI) is a person's weight in kilograms divided by the square of height in meters. A high BMI can be an indicator of high body fatness. BMI can be used to screen for weight categories that may lead to health problems but it is not diagnostic of the body fatness or health of an individual. <br>
+                            A high or low BMI may be an indicator of poor diet, varying activity levels, or high stress. Just because someone has a normal BMI does not mean that they are healthy.<br>
+                            BMI does not take account of body composition, for example, muscle, fat, bone density. Sex and other factors which can impact your weight can also lead to an inaccurate reading. As such a BMI calculation is not a suitable measure for some people including children and young people under 18, pregnant women and athletes
+                        </p>
+                    </div>
+
+
+            <!-- Input form -->
+            <section class="message-form">
+                <h1 class="message-title">Calculate Your BMI</h1>
+                <div class="message-input">
+                    <form onsubmit="return formValidation()" class="message">
+                        <div class="input-container">  
+                            <label for="name" class="name">Name:</label>
+                            <input type="text" id="name-input" name="fname" placeholder="Name">
+                        </div>
+                        <div class="input-container">  
+                            <label for="weight" class="weight">Weight:</label>
+                            <input type="number" id="weight-input" name="weight" placeholder="in KG (kilograms)">
+                        </div>
+                        <div class="input-container">  
+                            <label for="height" class="height">Height:</label>
+                            <input type="number" id="height-input" name="height" placeholder="in CM (centimeters)">
+                        </div>
+                        <div>
+                            <button type="button" class="button-input" onclick="calculateBMI()">Calculate</button>
+                            <button type="button" class="button-reset" onclick="resetForm()">Reset</button>
+                        </div>
+                    </form>
+                </div> 
+            </section>
+
+
+            <!-- Result -->
+            <section>
+                <div class="result-container">
+                    <div class="result-container2" id="result-container2">
+                        <div class="result" id="result">
+                            <p id="result-number"></p>
+                            <p id="result-text"></p>
+                            <p id="result-tips"></p>
+                        </div>
+                    </div>
+                    <div class="bmi">
+                        <h3 class="interpretation">Interpretation:</h3>
+                        <img src="assets/bmi-chart.png" alt="bmi-chart" class="bmi-chart">
+                        <div>
+                            <h4>Risks associated with being overweight</h4>
+                            <p>Being overweight increases the risk of a number of serious diseases and health conditions. Below is a list of said risks, according to the Centers for Disease Control and Prevention (CDC):</p>
+                            <ul>    
+                                <li>High blood pressure</li>
+                                <li>Higher levels of LDL cholesterol, which is widely considered "bad cholesterol," lower levels of HDL cholesterol, considered to be good cholesterol in moderation, and high levels of triglycerides</li>
+                                <li>Type II diabetes</li>
+                                <li>Coronary heart disease</li>
+                                <li>Stroke</li>
+                                <li>Gallbladder disease</li>
+                                <li>Osteoarthritis, a type of joint disease caused by breakdown of joint cartilage</li>
+                                <li>Sleep apnea and breathing problems</li>
+                                <li>Certain cancers (endometrial, breast, colon, kidney, gallbladder, liver)</li>
+                                <li>Low quality of life</li>
+                                <li>Mental illnesses such as clinical depression, anxiety, and others</li>
+                                <li>Body pains and difficulty with certain physical functions</li>
+                            </ul>
+                            <p>Generally, an increased risk of mortality compared to those with a healthy BMI
+                                As can be seen from the list above, there are numerous negative, in some cases fatal, outcomes that may result from being overweight. Generally, a person should try to maintain a BMI below 25 kg/m2, but ideally should consult their doctor to determine whether or not they need to make any changes to their lifestyle in order to be healthier.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Risks associated with being underweight</h4>
+                            <p>Being underweight has its own associated risks, listed below:</p>
+                            <ul>
+                                <li>Malnutrition, vitamin deficiencies, anemia (lowered ability to carry blood vessels)</li>
+                                <li>Osteoporosis, a disease that causes bone weakness, increasing the risk of breaking a bone</li>
+                                <li>A decrease in immune function</li>
+                                <li>Growth and development issues, particularly in children and teenagers</li>
+                                <li>Possible reproductive issues for women due to hormonal imbalances that can disrupt the menstrual cycle. Underweight women also have a higher chance of miscarriage in the first trimester</li>
+                                <li>Potential complications as a result of surgery</li>
+                                <li>Generally, an increased risk of mortality compared to those with a healthy BMI</li>
+                            </ul>
+                            <p>In some cases, being underweight can be a sign of some underlying condition or disease such as anorexia nervosa, which has its own risks. Consult your doctor if you think you or someone you know is underweight, particularly if the reason for being underweight does not seem obvious.
+                            </p>
+                        </div>
+                    </div>
+
+                
+
+            </section>
+    
+        </main>
+</body>
+
+<!-- footer -->
+<footer>
+    <div class="footer">
+       <p>This page is available under the assignment project</br>© Copyright 2025</p>
+    </div>
+</footer>
+</html>

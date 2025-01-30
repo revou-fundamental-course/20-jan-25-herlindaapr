@@ -1,0 +1,143 @@
+body {
+    font-family: "Poppins", serif;
+    background-color: #fcfefc;
+}
+
+.greetings-container {
+    margin: 40px 0px 40px 0px;
+    padding: 0px 20px 0px 20px;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #e6e6e6;
+    align-self: center;
+    margin-bottom: 80px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.button-input {
+    padding: 5px;
+    width: 150px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: whitesmoke;
+    padding: 10px 0px 10px 0px;
+}
+
+.button-input:hover {
+    background-color: rgb(43, 143, 43);
+}
+
+.button-reset {
+    padding: 5px;
+    width: 150px;
+    background-color: rgb(136, 136, 136);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: whitesmoke;
+    padding: 10px 0px 10px 0px;
+}
+
+.button-reset:hover {
+    background-color: rgb(80, 78, 78);
+}
+.bmi{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+}
+
+.interpretation {
+    text-align: center;
+    margin: 30px;
+}
+
+.bmi-chart {
+    width: 300px;
+    display: flex;
+    align-self: center;
+}
+
+.message-title {
+    text-align: center;
+}
+.result-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-container2 {
+    color: smokewhite;
+    width: 500px;
+    align-self: center;
+    background-color: #a3abd3;
+    transition: 1s ease-in-out;
+    height: 0px;
+    padding: 0px;
+}
+
+.result {
+    text-align: center;
+    padding: 90px 10px 90px 10px;
+}
+
+.show {
+    display: block;
+    height: 600px;
+    margin: 40px 0px 40px 0px;
+}
+
+#result-number {
+    font-size: 40px;
+    color: bl;
+    font-weight: bold;
+}
+
+#result-text {
+    font-size: 24px;
+    color: floralwhite;
+}
+
+#result-tips {
+    color: rgb(248, 241, 230);
+    padding: 0px 10px 0px 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #a3abd3;
+    font-size: 10px;
+    color: floralwhite;
+}
+
+@media screen and (max-width: 425px) {
+    .show {
+        width: auto;
+    }
+    
+}
